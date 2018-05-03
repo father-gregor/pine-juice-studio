@@ -1,0 +1,45 @@
+{
+  "name": "pine-juice-studio",
+  "version": "0.0.2",
+  "description": "Backend server for Pine Juice site",
+  "license": "MIT",
+  "engines": {
+    "node": "8.6.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/father-gregor/pine-juice-studio"
+  },
+  "author": "father-gregor <bobsixpackbob@gmail.com>",
+  "contributors": [
+    {
+      "name": "father-gregor",
+      "email": "bobsixpackbob@gmail.com"
+    }
+  ],
+  "scripts": {
+    "dev": "concurrently \"npm run devServer\" \"npm run devClient\"",
+    "start": "node ./bin/server.js",
+    "devServer": "nodemon ./bin/server.js",
+    "devClient": "cd client && npm run dev"
+  },
+  "private": true,
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "cors": "^2.8.4",
+    "debug": "^3.1.0",
+    "express": "^4.16.3",
+    "mongoose": "^5.0.12",
+    "morgan": "^1.9.0",
+    "request": "^2.85.0",
+    "request-promise-native": "^1.0.5",
+    "serve-favicon": "^2.4.5"
+  },
+  "devDependencies": {},
+  "keywords": [
+    "node",
+    "vuejs",
+    "express",
+    "api"
+  ]
+}
