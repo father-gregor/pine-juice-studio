@@ -23,7 +23,7 @@
     "devServer": "nodemon ./bin/server.js",
     "devClient": "cd client && npm run dev",
     "startClient": "cd client && npm run start",
-    "herokuWeb": "concurrently \"npm run start\" \"npm run startClient\""
+    "herokuWeb": "npm run start && npm run startClient"
   },
   "private": true,
   "dependencies": {
