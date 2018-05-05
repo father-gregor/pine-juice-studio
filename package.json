@@ -1,6 +1,6 @@
 {
   "name": "pine-juice-studio",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Backend server for Pine Juice site",
   "license": "MIT",
   "engines": {

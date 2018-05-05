@@ -1,3 +1,5 @@
-# pine-juice-studio
+# Pine Juice Studio
 
-> Modern web-project
+Modern web project build with Node.js, Express and Vue.js.
+
+Currently in active (kind of) development.
