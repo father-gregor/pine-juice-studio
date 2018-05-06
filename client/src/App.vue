@@ -1,20 +1,24 @@
 <template>
-	<div id="app">
-		<img src="./assets/logo.png">
-		<icon label="No Photos">
-			<icon name="archive"></icon>
-		</icon>
-		<router-view/>
-	</div>
+	<v-app id="pinejuicestudio">
+		<custom-header></custom-header>
+		<app-content></app-content>
+		<custom-footer></custom-footer>
+	</v-app>
 </template>
 
 <script>
-	import 'vue-awesome/icons/archive'
-	import Icon from 'vue-awesome/components/Icon'
+	import CustomHeader from './components/CustomHeader.vue';
+	import AppContent from './components/AppContent.vue';
+	import CustomFooter from './components/CustomFooter.vue'
+	import 'vue-awesome/icons/archive';
+	import Icon from 'vue-awesome/components/Icon';
 
 	export default {
 		name: 'App',
 		components: {
+			CustomHeader,
+			AppContent,
+			CustomFooter,
 			Icon
 		}
 	}
