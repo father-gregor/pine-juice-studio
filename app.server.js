@@ -18,7 +18,9 @@ app.use("/", express.static(path.join(__dirname, "dist")));
 //app.use("/api/words", wordsRoutes);
 
 app.get("*", (req, res) => {
-	res.sendFile(__dirname + '/dist/index.html')
+	return res.sendFile(__dirname + '/dist/index.html');
+	// TODO Use this for production
+	//return res.status(404).send();
 });
 
 app.use(function (req, res, next) {
