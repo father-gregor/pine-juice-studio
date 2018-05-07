@@ -2,7 +2,13 @@
 @import 'variables';
 
 body {
-	// background-color: #42b983;
-	color: white;
+	// Override vuetify background-color theme
+	.application.theme--light {
+		background-color: #ffffff;
+	}
+}
+
+.pull-right {
+	float: right;
 }
 

@@ -1,7 +1,13 @@
 <template>
 	<v-app id="pinejuicestudio">
 		<custom-header></custom-header>
-		<app-content></app-content>
+		<v-container>
+			<v-layout row wrap>
+				<v-flex xs12>
+					<app-content></app-content>
+				</v-flex>
+			</v-layout>
+		</v-container>
 		<custom-footer></custom-footer>
 	</v-app>
 </template>
@@ -10,16 +16,13 @@
 	import CustomHeader from './components/CustomHeader.vue';
 	import AppContent from './components/AppContent.vue';
 	import CustomFooter from './components/CustomFooter.vue'
-	import 'vue-awesome/icons/archive';
-	import Icon from 'vue-awesome/components/Icon';
 
 	export default {
 		name: 'App',
 		components: {
 			CustomHeader,
 			AppContent,
-			CustomFooter,
-			Icon
+			CustomFooter
 		}
 	}
 </script>
