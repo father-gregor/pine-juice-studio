@@ -1,4 +1,13 @@
 {
 	"siteName": "Pine Juice Studio",
-	"logoAlt": "Pine Juice Studio"
+	"logoAlt": "Pine Juice Studio",
+	"instragram": {
+		"url": "https://www.instagram.com/dominicofrank/",
+		"name": ""
+	},
+	"facebook": {
+		"url": "https://www.facebook.com/kirill.dolgopolov",
+		"name": ""
+	},
+	"footerCompanyName": "Pine Juice Studio"
 }

@@ -1,14 +1,9 @@
 <template>
 	<v-layout row class="header-container">
 		<v-flex xs5 class="flex-left">
-			<v-layout column fill-height>
-				<v-flex xs3></v-flex>
-				<v-flex xs9>
-					<div class="drinking-straw">
-						<div class="drinking-straw-body"></div>
-					</div>
-				</v-flex>
-			</v-layout>
+			<div class="drinking-straw">
+				<div class="drinking-straw-body"></div>
+			</div>
 		</v-flex>
 		<v-flex xs2 justify-center class="flex-logo">
 			<div class="logo-container">
@@ -18,20 +13,17 @@
 			</div>
 		</v-flex>
 		<v-flex xs5 class="flex-right">
-			<v-layout column fill-height>
-				<v-flex xs3>
-					<div class="pull-right">
-						<icon name="brands/facebook-square"></icon>
-						<icon name="brands/instagram"></icon>
-					</div>
-				</v-flex>
-				<v-flex xs9>
-					<div class="drinking-straw">
-						<div class="drinking-straw-body"></div>
-					</div>
-				</v-flex>
-			</v-layout>
-
+			<div class="drinking-straw">
+				<div class="drinking-straw-body"></div>
+			</div>
+			<div class="pull-right social-block">
+				<a v-bind:href="$options.stringsConfig.facebook.url" target="_blank">
+					<icon name="brands/facebook-square" scale="1.4"></icon>
+				</a>
+				<a v-bind:href="$options.stringsConfig.instragram.url" target="_blank">
+					<icon name="brands/instagram" scale="1.4"></icon>
+				</a>
+			</div>
 		</v-flex>
 	</v-layout>
 </template>
@@ -50,7 +42,7 @@
 			Icon
 		},
 		stringsConfig
-	}
+	};
 </script>
 <style scoped lang="scss">
 	@import '../style/scss/variables';
@@ -81,11 +73,15 @@
 
 	.flex-left,
 	.flex-right {
-		padding-top: 25px;
+		padding-top: 45px;
 
 		@media screen and (max-width: $sm-max-width) {
-			padding-top: 15px;
+			padding-top: 40px;
 		}
+	}
+
+	.flex-right {
+		position: relative;
 	}
 
 	.drinking-straw {
@@ -96,5 +92,20 @@
 		height: 20px;
 		background: $color-drinking-straw;
 		border-radius: 5px;
+
+		@media screen and (max-width: $sm-max-width) {
+			height: 15px;
+		}
+	}
+
+	.social-block {
+		position: absolute;
+		top: 20px;
+		right: 20px;
+
+		a {
+			color: black;
+			margin-left: 5px;
+		}
 	}
 </style>
