@@ -1,8 +1,28 @@
 @import 'mixins';
 @import 'variables';
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower');
 
 body {
-	// background-color: #42b983;
-	color: white;
+	min-width: 400px;
+
+	// Override vuetify background-color theme
+	.application.theme--light {
+		background-color: #ffffff;
+	}
+}
+
+// Hide menu's right border
+.nav-menu {
+	.navigation-drawer__border {
+		display: none;
+	}
+
+	.list__tile__title {
+		text-align: center;
+	}
+}
+
+.pull-right {
+	float: right;
 }
 
