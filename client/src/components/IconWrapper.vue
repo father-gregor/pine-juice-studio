@@ -9,7 +9,7 @@
 		components: {
 			Icon
 		}
-	}
+	};
 </script>
 <style>
 
