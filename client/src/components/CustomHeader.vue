@@ -1,9 +1,7 @@
 <template>
 	<v-layout row class="header-container">
 		<v-flex xs5 class="flex-left">
-			<div class="drinking-straw">
-				<div class="drinking-straw-body"></div>
-			</div>
+			<drinking-straw></drinking-straw>
 		</v-flex>
 		<v-flex xs2 justify-center class="flex-logo">
 			<div class="logo-container">
@@ -13,9 +11,7 @@
 			</div>
 		</v-flex>
 		<v-flex xs5 class="flex-right">
-			<div class="drinking-straw">
-				<div class="drinking-straw-body"></div>
-			</div>
+			<drinking-straw></drinking-straw>
 			<div class="pull-right social-block">
 				<a v-bind:href="$options.stringsConfig.facebook.url" target="_blank">
 					<icon name="brands/facebook-square" scale="1.4"></icon>
@@ -30,6 +26,7 @@
 <script>
 	import * as stringsConfig from '../assets/config/strings.json';
 	import Icon from 'vue-awesome/components/Icon';
+	import DrinkingStraw from './DrinkingStraw.vue'
 
 	export default {
 		name: 'CustomHeader',
@@ -39,10 +36,11 @@
 			}
 		},
 		components: {
+			DrinkingStraw,
 			Icon
 		},
 		stringsConfig
-	};
+	}
 </script>
 <style scoped lang="scss">
 	@import '../style/scss/variables';
@@ -84,20 +82,6 @@
 		position: relative;
 	}
 
-	.drinking-straw {
-		margin: auto;
-	}
-
-	.drinking-straw-body {
-		height: 20px;
-		background: $color-drinking-straw;
-		border-radius: 5px;
-
-		@media screen and (max-width: $sm-max-width) {
-			height: 15px;
-		}
-	}
-
 	.social-block {
 		position: absolute;
 		top: 20px;
@@ -106,6 +90,10 @@
 		a {
 			color: black;
 			margin-left: 5px;
+		}
+
+		@media screen and (max-width: $sm-max-width) {
+			top: 14px;
 		}
 	}
 </style>
