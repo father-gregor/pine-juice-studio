@@ -1,19 +1,18 @@
 <template>
 	<v-content>
 		<v-container>
-			<v-layout row wrap>
-				<v-flex xs12 justify-center>
-					<div>
-						CUMMING SOON
-					</div>
-				</v-flex>
-			</v-layout>
+			<art-container></art-container>
 		</v-container>
 	</v-content>
 </template>
 <script>
+	import ArtContainer from './ArtContainer.vue'
+
 	export default {
-		name: 'AppContent'
+		name: 'AppContent',
+		components: {
+			ArtContainer
+		}
 	}
 </script>
 <style scoped>

@@ -50,6 +50,10 @@
 		margin-top: 15px;
 		padding-left: 15px;
 		padding-right: 15px;
+
+		@media screen and (max-width: $xs-max-width) {
+			height: 105px;
+		}
 	}
 
 	.flex-logo {
